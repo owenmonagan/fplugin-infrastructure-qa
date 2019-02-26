@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: fplugin
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: fplugin-ip
+    kubernetes.io/ingress.global-static-ip-name: fplugin-qa
   labels:
     app: fplugin
 spec:

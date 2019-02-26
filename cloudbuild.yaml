@@ -35,7 +35,7 @@ steps:
     args:
       - '-c'
       - |
-        gsutil cp gs://${PROJECT_ID}-fplugin-configs/hub.enc hub.enc
+        gsutil cp gs://github-authentication/hub.enc hub.enc
 
         gcloud kms decrypt \
           --ciphertext-file=hub.enc \

@@ -2,17 +2,17 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: fplugin
-  name: fplugin
+    app: fplugin-qa
+  name: fplugin-qa
   namespace: default
 spec:
   selector:
     matchLabels:
-      app: fplugin
+      app: fplugin-qa
   template:
     metadata:
       labels:
-        app: fplugin
+        app: fplugin-qa
     spec:
       containers:
       - image: gcr.io/fantasy-218701/fplugin-draft:60f4399f4c4eab5ecd4c9208afe3671d50c72976
@@ -20,7 +20,7 @@ spec:
           httpGet:
             path: /alive
             port: 8080
-        name: fplugin
+        name: fplugin-qa
         ports:
         - containerPort: 8080
           protocol: TCP
